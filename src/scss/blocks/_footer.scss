@@ -1,0 +1,56 @@
+.footer {
+    padding: 8px 0;
+    background-color: $gray1;
+
+    &__wrapper {
+        padding: 8px 0;
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        // gap: 24px;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 223px;
+        }
+    }
+
+    &__info {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+
+        &-link {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $white;
+        }
+    }
+
+    &__payment {
+        display: flex;
+        justify-content: flex-end;
+        gap: 24px;
+        
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__copyright {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: $gray4;
+    }
+}

@@ -1,0 +1,43 @@
+.policy,
+.agreement {
+    padding: 24px 0 48px 0;
+
+    &__wrapper {
+        padding-top: 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__headline {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray1;
+    }
+
+    &__paragraph {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray2;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray2;
+        }
+    }
+}
+
+.agreement {
+    min-height: 904px;
+}

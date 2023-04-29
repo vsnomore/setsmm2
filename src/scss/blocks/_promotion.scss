@@ -1,0 +1,14 @@
+.promotion {
+    min-height: 242px;
+    background: linear-gradient(43.56deg, #FEDA75 -16.38%, #FA7E1E -3.68%, #D62976 39.6%, #962FBF 65.84%, #4F5BD5 89.17%);
+    padding: 64px 0;
+
+    &__descr {
+        margin-top: 16px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $white;
+    }
+}

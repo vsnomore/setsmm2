@@ -1,0 +1,64 @@
+.main-promo {
+    min-height: 480px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        &-title {
+            width: 326px;
+            font-weight: 200;
+            font-size: 64px;
+            line-height: 84px;
+            color: $gray1;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        overflow: hidden;
+        gap: 24px;
+        height: 480px;
+
+        &-item {
+
+            &:nth-child(1) {
+                position: relative;
+                animation: main-promo 71s infinite linear;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                animation: main-promo 76s infinite linear;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                animation: main-promo 74s infinite linear;
+            }
+
+            &:nth-child(4) {
+                position: relative;
+                animation: main-promo 73s infinite linear;
+            }
+
+            &:nth-child(5) {
+                position: relative;
+                animation: main-promo 79s infinite linear;
+            }
+
+            &:nth-child(6) {
+                position: relative;
+                animation: main-promo 72s infinite linear;
+            }
+        }
+    }
+}

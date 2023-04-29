@@ -1,0 +1,99 @@
+.examples {
+    padding: 48px 0;
+    min-height: 760px;
+
+    &__block {
+        padding: 48px 24px;
+        border-radius: 12px;
+        border: none;
+        background-color: $bg1;
+    }
+
+    &__grid {
+        padding: 36px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        &-item {
+            padding: 32px 0;
+            background-color: $white;
+            border: none;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-profile {
+                display: flex;
+                gap: 16px;
+
+                &-info {
+                    padding: 5px 4px 5px 0;
+                }
+
+                &-img {
+                    width: 50px;
+                }
+
+                &-name {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $gray7;
+                }
+
+                &-subs {
+                    margin-top: 4px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $gray1;
+
+                    span {
+                        @include insta-linear;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        
+                    }
+                }
+            }
+
+            &-divider {
+                margin-top: 15px;
+                width: 186px;
+            }
+
+            &-amount {
+                margin-top: 15px;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: $gray1;
+            }
+
+            &-descr {
+                margin-top: 4px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: $gray2;
+            }
+        }
+    }
+
+    &__consultation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $gray2;
+
+        &-link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray1;
+        }
+    }
+}

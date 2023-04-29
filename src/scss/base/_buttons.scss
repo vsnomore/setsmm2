@@ -1,0 +1,35 @@
+.button {
+    padding: 9px 16px;
+    background-color: $main;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $gray1;
+    cursor: pointer;
+
+    &_sign-in {
+        background-color: transparent;
+        border: 2px solid $main;
+    }
+
+    &_promo,
+    &_modal {
+        padding: 14px 0;
+        width: 100%;
+    }
+
+    &_order {
+        padding: 12px 0;
+        width: 100%;
+        bottom: none;
+    }
+
+    &_prices {
+        margin: auto auto;
+        height: 40px;
+    }
+}

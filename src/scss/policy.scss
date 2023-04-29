@@ -1,0 +1,44 @@
+@import './base/variables';
+@import './base/mixins';
+@import './base/title';
+@import './base/buttons';
+@import './base/animations';
+
+* {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 12px;
+        padding: 0 3px;
+        border: 1px solid $gray4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        border: 2px solid white;
+        border-radius: 100px;
+        background-color: $gray3;
+    }
+}
+
+.container {
+    width: 1152px;
+    margin: 0 auto;
+}
+
+@import "blocks/modals";
+@import "blocks/header";
+@import "blocks/policy&agreement";
+@import "blocks/footer";
+@import "base/media";

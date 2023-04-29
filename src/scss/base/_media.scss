@@ -1,0 +1,528 @@
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+
+    .main-promo {
+        &__grid {
+            &-column {
+                width: 70px;
+            }
+        }
+    }
+
+    .order {
+        &__info {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    .prices__grid {
+        grid-template-columns: 400px 329px 183px;
+    }
+
+    .footer__info {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
+    .header {
+        .menu {
+            gap: 20px;
+        }
+
+        &__logo {
+            img {
+                width: 190px;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+
+    .button_sign-in,
+    #btn-registration.button {
+        padding: 5px 8px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    #btn-registration.button {
+        border: 2px solid #ffd900;
+    }
+
+    .main-promo {
+        &__block {
+            &-title {
+                width: 300px;
+                font-size: 54px;
+            }
+        }
+
+        &__grid {
+            gap: 10px;
+
+            &-column {
+                width: 50px;
+            }
+        }
+    }
+
+    .order {
+        &__form {
+            width: 328px;
+        }
+
+        &__info {
+            width: 320px;
+        }
+    }
+
+    .prices__grid {
+        grid-template-columns: 200px 317px 183px;
+        gap: 10px;
+    }
+
+    .footer {
+
+        &__info {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__logo {
+            img {
+                width: 190px;
+            }
+        }
+
+        &__payment {
+            gap: 10px;
+        }
+    }
+
+    .modal {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .header {
+        .menu {
+            gap: 8px;
+
+            &__link {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &__logo {
+            img {
+                width: 140px;
+            }
+        }
+
+        &__buttons {
+            gap: 2px;
+        }
+    }
+
+    .button_sign-in,
+    #btn-registration.button {
+        padding: 3px 5px;
+    }
+
+    .main-promo {
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+
+        &__grid {
+            display: none;
+        }
+
+        &__wrapper {
+            justify-content: center;
+        }
+
+        &__block {
+            gap: 24px;
+
+            &-title {
+                width: 360px;
+                font-size: 42px;
+                line-height: 58px;
+                text-align: center;
+            }
+        }
+    }
+
+    .order {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__form {
+            width: 492px;
+        }
+
+        &__info {
+            width: 492px;
+            padding: 0;
+        }
+    }
+
+    .prices {
+        &__grid {
+            grid-template-columns: 1fr;
+
+
+            &-social {
+                justify-content: center;
+            }
+
+            &-descr {
+                justify-content: center;
+            }
+        }
+    }
+
+    .button_prices {
+        width: 50%;
+        margin-bottom: 24px;
+    }
+
+    .examples {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        &__logo {
+            justify-content: center;
+
+            img {
+                width: 223px;
+            }
+        }
+
+        &__info {
+            gap: 16px;
+        }
+
+        &__payment {
+            justify-content: center;
+            gap: 24px;
+        }
+
+        &__copyright {
+            margin-top: 16px;
+        }
+    }
+
+    .modal {
+        width: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 400px;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .header {
+        padding: 100px 16px 16px 16px;
+        position: fixed;
+        background-color: $white;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+        left: -100%;
+        transition: all 0.6s;
+        align-items: flex-start;
+
+        &__active {
+            left: 0;
+        }
+
+        &__wrapper {
+            margin: 0 auto;
+            width: 208px;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 48px;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__buttons {
+            display: flex;
+            gap: 16px;
+        }
+    }
+
+    .menu {
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        &__link {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .button_sign-in,
+    #btn-registration.button {
+        width: 208px;
+        padding: 9px 16px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #btn-registration.button {
+        border: none;
+    }
+
+    .main-promo {
+        min-height: 204px;
+        padding: 36px 0;
+
+        &__block {
+            gap: 16px;
+            align-items: center;
+
+            &-title {
+                width: 275px;
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+    }
+
+    .button_promo {
+        width: 400px;
+    }
+
+    .promotion {
+        display: none;
+    }
+
+    .order {
+        padding: 0;
+
+        &__block {
+            padding: 36px 16px;
+            border-radius: 0;
+        }
+
+        &__wrapper {
+            margin-top: 24px;
+        }
+
+        &__form {
+            width: 368px;
+        }
+
+        &__info {
+            width: 368px;
+
+            &-item {
+
+                &:nth-child(3),
+                &:nth-child(5),
+                &:last-child {
+                    padding: 10px 8px;
+                }
+            }
+        }
+    }
+
+    .prices {
+        padding: 36px 0;
+
+        &__grid {
+            margin-top: 24px;
+            padding: 16px 0;
+            gap: 16px;
+
+            &-social {
+                gap: 4px;
+
+                &-icon {
+                    display: none;
+                }
+
+                &-mobicon {
+                    margin: 4px;
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &-name {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+
+            &-descr {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .button_prices {
+        width: 100%;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .examples {
+        padding: 0;
+
+        &__block {
+            padding: 36px 16px;
+            border-radius: 0;
+        }
+
+        &__grid {
+            padding: 24px 0;
+            grid-template-columns: 1fr;
+
+            &-item {
+                border-radius: 0;
+                padding: 16px 0;
+            }
+        }
+    }
+
+    .policy,
+    .agreement {
+        padding: 36px 0 48px 0;
+
+        &__wrapper {
+            gap: 16px;
+        }
+    }
+
+    .modal {
+        width: 390px;
+        top: 100%;
+        transform: translate(-50%, -100%);
+        animation-name: animatetop;
+        animation-timing-function: linear;
+        animation-duration: .7s;
+    }
+}
+
+@media (max-width: 414px) {
+    .container {
+        width: 360px;
+    }
+
+    .button_promo {
+        width: 360px;
+    }
+
+    .order {
+        &__form {
+            width: 328px;
+        }
+
+        &__info {
+            width: 328px;
+            grid-template-columns: 1fr 85px;
+
+            &-item {
+
+                &-text,
+                &-name,
+                &-descr {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .modal {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 320px;
+    }
+
+    .button_promo {
+        width: 320px;
+    }
+
+    .order {
+        &__form {
+            width: 288px;
+        }
+
+        &__info {
+            width: 288px;
+            grid-template-columns: 1fr 80px;
+
+            &-item {
+
+                &-text,
+                &-name,
+                &-descr {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
