@@ -282,44 +282,78 @@ document.addEventListener('DOMContentLoaded', () => {
         orderSum.innerHTML = `${finalCost}₽`;
     }
 
-    //валідація
-    const userDataInputs = document.querySelectorAll('label[data-userinfo] input');
-    const userDataLabels = document.querySelectorAll('label[data-userinfo]');
-    const formButton = document.querySelector('.order .button.button_order');
-
+    //валідація форми
     const validateEmail = (email) => {
         return String(email).toLowerCase().match(
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
     };
-
+    
     let statusForSendingData = true;
 
-    formButton.addEventListener('click', e => {
-        e.preventDefault();
-        statusForSendingData = true;
+    validation('#consultation');
+    validation('#sign-in');
+    validation('#sign-up');
+    validation('.order .order__form');
 
-        const minValue = +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0,-3);
-        const maxValue = +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0,-3);
+    function validation(parentForm) {
+        const form = document.querySelector(parentForm),
+              formButton = form.querySelector('.button'),
+              formInputs = form.querySelectorAll('input'),
+              formClose = form.querySelector('.modal__close-icon');
 
-        if (!validateEmail(userDataInputs[0].value)) {
-            userDataLabels[0].classList.add('incorrect');
-            statusForSendingData = false;
-        };
 
-        if (!userDataInputs[1].value) {
-            userDataLabels[1].classList.add('incorrect');
-            statusForSendingData = false;
-        };
+        formButton.addEventListener('click', e => {
+            e.preventDefault();
+            statusForSendingData = true;
 
-        if ((userDataInputs[2].value < minValue) || (userDataInputs[2].value > maxValue)) {
-            userDataLabels[2].classList.add('incorrect');
-            statusForSendingData = false;
+            formInputs.forEach(el => {
+                if (el.name == 'email' && !validateEmail(el.value)) {
+                    el.labels[0].classList.add('incorrect');
+                    statusForSendingData = false;
+                }
+
+                if (el.name == 'phone' && !el.value) {
+                    el.labels[0].classList.add('incorrect');
+                    statusForSendingData = false;
+                }
+
+                if (el.name == 'link' && !el.value) {
+                    el.labels[0].classList.add('incorrect');
+                    statusForSendingData = false;
+                }
+
+                if (el.name == 'quantity' && (el.value < +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0,-3)) || el.value > +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0,-3)) {
+                    el.labels[0].classList.add('incorrect');
+                    statusForSendingData = false;
+                }
+
+                if (el.name == 'password') {
+                    if (!el.value) {
+                        el.labels[0].classList.add('incorrect');
+                        el.value = '';
+                        statusForSendingData = false;
+                    }
+                }
+
+                if (el.name == 'password2' && el.value != form.querySelector('input[name="password"]').value) {
+                    el.labels[0].classList.add('incorrect');
+                    statusForSendingData = false;
+                }
+            });  
+        });
+
+        formInputs.forEach( el => el.addEventListener('input', () => {
+            el.labels[0].classList.remove('incorrect');
+        }));
+
+        if (form.contains(formClose)) {
+            formClose.addEventListener('click', () => {
+                formInputs.forEach(el => {
+                    el.value = '';
+                    el.labels[0].classList.remove('incorrect');
+                });
+            });
         }
-        console.log(statusForSendingData);
-    });
-
-    userDataInputs.forEach( (el,ind) => el.addEventListener('input', () => {
-        userDataLabels[ind].classList.remove('incorrect');
-    }));
+    }
 });

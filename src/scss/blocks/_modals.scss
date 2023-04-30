@@ -84,6 +84,53 @@
                 border: 1px solid $gray4;
             }
         }
+
+        label.incorrect {
+            position: relative;
+
+            input {
+                border: solid 1px rgba($color: #ff0000, $alpha: .5);
+
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url('../icons/state/danger.svg') center center / cover no-repeat;
+                bottom: 16px;
+                right: 16px;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                bottom: -16px;
+                left: 16px;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 15px;
+                color: #ff0000;
+            }
+        }
+
+        label.incorrect[data-userinfo="email"]:after {
+            content: "Некорректный email";
+        }
+
+        label.incorrect[data-userinfo="pass"]:after {
+            content: "Некорректный пароль";
+        }
+
+        label.incorrect[data-userinfo="pass2"]:after {
+            content: "Пароль не совпадает";
+        }
+
+        label.incorrect[data-userinfo="phone"]:after {
+            content: "Введите номер телефона";
+        }
     }
 }
 
