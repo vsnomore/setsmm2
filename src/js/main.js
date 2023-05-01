@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (el.name == 'phone') {
-                    if(!el.value) {
+                    if(el.value.toString().length < 8) {
                         el.labels[0].classList.add('incorrect');
                         statusForSendingData = false;
                     }
@@ -325,13 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusForSendingData = false;
                 }
 
-                if (el.name == 'quantity' && (el.value < +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0,-3)) || el.value > +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0,-3)) {
+                if (el.name == 'quantity') {
+                    if (el.value < +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0,-3) || el.value > +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0,-3)) {
                     el.labels[0].classList.add('incorrect');
                     statusForSendingData = false;
+                    }
                 }
 
                 if (el.name == 'password') {
-                    if (!el.value) {
+                    if(el.value.toString().length < 8) {
                         el.labels[0].classList.add('incorrect');
                         el.value = '';
                         statusForSendingData = false;
