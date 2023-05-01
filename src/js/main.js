@@ -4,66 +4,66 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Instagram',
             icon: './icons/social-transparent/instagram64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - insta', priceForHundred: 3.22, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Лайки высокого качества - insta', priceForHundred: 4, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Подписчики с гарантией - insta', priceForHundred: 5.55, minOrder: 10, maxOrder: 50000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000},
-                {serviceName: 'Просмотры дешевые', priceForHundred: 0.72, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000}
-                
+                { serviceName: 'Лайки дешевые без гарантии - insta', priceForHundred: 3.22, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Лайки высокого качества - insta', priceForHundred: 4, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Подписчики с гарантией - insta', priceForHundred: 5.55, minOrder: 10, maxOrder: 50000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 },
+                { serviceName: 'Просмотры дешевые', priceForHundred: 0.72, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000 }
+
             ]
         },
         {
             name: 'Telegram',
             icon: './icons/social-transparent/telegram64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - telegram', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000},
-                {serviceName: 'Лайки высокого качества - teleg', priceForHundred: 4, minOrder: 100, maxOrder: 250000},
-                {serviceName: 'Подписчики с гарантией - teleg', priceForHundred: 15.55, minOrder: 440, maxOrder: 50000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000},
-                {serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000}
+                { serviceName: 'Лайки дешевые без гарантии - telegram', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000 },
+                { serviceName: 'Лайки высокого качества - teleg', priceForHundred: 4, minOrder: 100, maxOrder: 250000 },
+                { serviceName: 'Подписчики с гарантией - teleg', priceForHundred: 15.55, minOrder: 440, maxOrder: 50000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 },
+                { serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000 }
             ]
         },
         {
             name: 'TikTok',
             icon: './icons/social-transparent/tiktok64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - tik', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000},
-                {serviceName: 'Лайки высокого качества - tik', priceForHundred: 4, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Подписчики с гарантией - tik', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000}
+                { serviceName: 'Лайки дешевые без гарантии - tik', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000 },
+                { serviceName: 'Лайки высокого качества - tik', priceForHundred: 4, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Подписчики с гарантией - tik', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 }
             ]
         },
         {
             name: 'YouTube',
             icon: './icons/social-transparent/youtube64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - YouTube', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000},
-                {serviceName: 'Лайки высокого качества - YouTube', priceForHundred: 4, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000},
-                {serviceName: 'Комментарии позитивные с гарантией - YouTube', priceForHundred: 25, minOrder: 10, maxOrder: 3000}
+                { serviceName: 'Лайки дешевые без гарантии - YouTube', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000 },
+                { serviceName: 'Лайки высокого качества - YouTube', priceForHundred: 4, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 },
+                { serviceName: 'Комментарии позитивные с гарантией - YouTube', priceForHundred: 25, minOrder: 10, maxOrder: 3000 }
             ]
         },
         {
             name: 'Twitch',
             icon: './icons/social-transparent/twitch64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - Twitch', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000},
-                {serviceName: 'Лайки высокого качества - Twitch', priceForHundred: 4, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Подписчики с гарантией - Twitch', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000},
-                {serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000}
+                { serviceName: 'Лайки дешевые без гарантии - Twitch', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000 },
+                { serviceName: 'Лайки высокого качества - Twitch', priceForHundred: 4, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Подписчики с гарантией - Twitch', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 },
+                { serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000 }
             ]
         },
         {
             name: 'Vk',
             icon: './icons/social-transparent/vk64.svg',
             services: [
-                {serviceName: 'Лайки дешевые без гарантии - VK', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000},
-                {serviceName: 'Лайки высокого качества - VK', priceForHundred: 4, minOrder: 10, maxOrder: 250000},
-                {serviceName: 'Подписчики с гарантией - VK', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000},
-                {serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000},
-                {serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000}
+                { serviceName: 'Лайки дешевые без гарантии - VK', priceForHundred: 4.22, minOrder: 10, maxOrder: 150000 },
+                { serviceName: 'Лайки высокого качества - VK', priceForHundred: 4, minOrder: 10, maxOrder: 250000 },
+                { serviceName: 'Подписчики с гарантией - VK', priceForHundred: 15.55, minOrder: 10, maxOrder: 50000 },
+                { serviceName: 'Подписчики высокого качества СНГ', priceForHundred: 7.32, minOrder: 10, maxOrder: 30000 },
+                { serviceName: 'Комментарии позитивные с гарантией', priceForHundred: 25, minOrder: 10, maxOrder: 3000 }
             ]
         }
     ];
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentHTML.innerHTML = item;
 
         //new code
-        if(e.currentTarget.dataset.social) {
+        if (e.currentTarget.dataset.social) {
             currentSocial = e.target.dataset.social;
             renderServicesList();
             fillingInfo(0);
@@ -228,10 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            el.services.forEach( (el,ind) => {
+            el.services.forEach((el, ind) => {
                 const listItem = document.createElement('div');
                 listItem.classList.add('order__form-select-item');
-    
+
                 const price = el.priceForHundred < 1 ? el.priceForHundred : Math.floor(el.priceForHundred);
                 listItem.dataset.index = ind;
 
@@ -298,9 +298,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function validation(parentForm) {
         const form = document.querySelector(parentForm),
-              formButton = form.querySelector('.button'),
-              formInputs = form.querySelectorAll('input'),
-              formClose = form.querySelector('.modal__close-icon');
+            formButton = form.querySelector('.button'),
+            formInputs = form.querySelectorAll('input'),
+            formClose = form.querySelector('.modal__close-icon');
 
 
         formButton.addEventListener('click', e => {
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (el.name == 'phone') {
-                    if(el.value.toString().length < 8) {
+                    if (el.value.toString().length < 8) {
                         el.labels[0].classList.add('incorrect');
                         statusForSendingData = false;
                     }
@@ -326,14 +326,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (el.name == 'quantity') {
-                    if (el.value < +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0,-3) || el.value > +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0,-3)) {
-                    el.labels[0].classList.add('incorrect');
-                    statusForSendingData = false;
+                    if (el.value < +document.querySelector('.order__info-item-descr[data-info="min"]').textContent.slice(0, -3) || el.value > +document.querySelector('.order__info-item-descr[data-info="max"]').textContent.slice(0, -3)) {
+                        el.labels[0].classList.add('incorrect');
+                        statusForSendingData = false;
                     }
                 }
 
                 if (el.name == 'password') {
-                    if(el.value.toString().length < 8) {
+                    if (el.value.toString().length < 8 || !el.value.toString().match(/^[\S]*$/)) {
                         el.labels[0].classList.add('incorrect');
                         el.value = '';
                         statusForSendingData = false;
@@ -344,15 +344,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.labels[0].classList.add('incorrect');
                     statusForSendingData = false;
                 }
-            });  
+            });
         });
 
-        formInputs.forEach( el => el.addEventListener('input', () => {
+        formInputs.forEach(el => el.addEventListener('input', () => {
             el.labels[0].classList.remove('incorrect');
         }));
 
         if (form.contains(formClose)) {
             formClose.addEventListener('click', () => {
+                formInputs.forEach(el => {
+                    el.value = '';
+                    el.labels[0].classList.remove('incorrect');
+                });
+            });
+
+            overlay.addEventListener('click', () => {
                 formInputs.forEach(el => {
                     el.value = '';
                     el.labels[0].classList.remove('incorrect');
