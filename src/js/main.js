@@ -170,7 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.overlay');
     const closeButtons = document.querySelectorAll('.modal__close-icon');
     const buttons = document.querySelectorAll('.button');
-    // const closeButton = document.querySelector('.modal__close-icon');
+    const consultationLink = document.querySelector('.examples__consultation-link');
+    const consultation = document.getElementById('consultation');
 
     buttons.forEach(function (item) {
         if (item.hasAttribute('data-modal')) {
@@ -185,6 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.paddingRight = '12px';
             });
         }
+    });
+
+    consultationLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        consultation.classList.add('show');
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = '12px';
     });
 
     closeButtons.forEach(function (item) {
