@@ -85,6 +85,13 @@
                     border: 1px solid $gray4;
                 }
             }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                // -webkit-appearance: none;
+                appearance: none;
+                margin: 0;
+            }
         }
 
         label.incorrect {
@@ -164,4 +171,9 @@ label.incorrect[data-userinfo="pass2"]:before {
 
 .show {
     display: block;
+}
+
+.modal__form label input[type=number] {
+    // -moz-appearance: textfield;
+    appearance: textfield;
 }
