@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/agreement.min.css">
+    <link rel="icon" type="image/x-icon" href="./icons/Favicon.svg">
     <title>SetSMM - Agreement</title>
 </head>
 
@@ -195,6 +196,48 @@
         </div>
     </footer>
 
+    <div class="overlay"></div>
+    <div class="modal" id="sign-up">
+        <div class="modal__close"><span class="modal__close-icon">&times;</span></div>
+        <div class="modal__subtitle">Регистарция</div>
+        <div class="modal__descr">Мгновенный доступ к скидкам и бонусам</div>
+
+        <form class="modal__form" action="#">
+            <label data-userinfo="email">
+                <span>Введите ваш E-mail</span>
+                <input name="email" placeholder="E-mail" type="email">
+            </label>
+            <label data-userinfo="pass">
+                <span>Придумайте пароль</span>
+                <input data-field="password" name="password" placeholder="Пароль" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
+            </label>
+            <label data-userinfo="pass2">
+                <span>Повторите введенный пароль</span>
+                <input data-field="password" name="password2" placeholder="Повтор пароля" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
+            </label>
+            <button class="button button_modal">Регистарция</button>
+        </form>
+    </div>
+
+    <div class="modal" id="sign-in">
+        <div class="modal__close"><span class="modal__close-icon">&times;</span></div>
+        <div class="modal__subtitle">Вход</div>
+
+        <form class="modal__form" action="#">
+            <label data-userinfo="email">
+                <span>Введите ваш E-mail</span>
+                <input name="email" placeholder="E-mail" type="email">
+            </label>
+            <label data-userinfo="pass">
+                <span>Введите ваш пароль</span>
+                <input data-field="password" name="password" placeholder="Пароль" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
+            </label>
+            <button data-login="sign-in" class="button button_modal">Вход</button>
+        </form>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

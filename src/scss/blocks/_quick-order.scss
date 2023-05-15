@@ -165,7 +165,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 18px;
-            color: $gray3;
+            color: $gray2;
             border: 1px solid transparent;
             border-radius: 12px;
 
@@ -212,11 +212,11 @@
         }
 
         label.incorrect[data-userinfo="link"]:after {
-            content: "Введите адрес";
+            content: "Формат ссылки http(s)://example.com/exmp";
         }
 
         label.incorrect[data-userinfo="quantity"]:after {
-            content: "Выберите другое количество";
+            content: "Кол-во не соответствует мин/макс лимиту";
         }
 
         input::-webkit-outer-spin-button,

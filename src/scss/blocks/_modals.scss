@@ -59,29 +59,31 @@
         flex-direction: column;
         gap: 24px;
 
-        span {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: $gray2;
-        }
+        label {
+            span {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $gray2;
+            }
 
-        input {
-            margin-top: 4px;
-            width: 100%;
-            background: $white;
-            border: 1px solid $gray3;
-            border-radius: 12px;
-            padding: 15px 16px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 18px;
-            color: $gray3;
+            input {
+                margin-top: 4px;
+                width: 100%;
+                background: $white;
+                border: 1px solid $gray3;
+                border-radius: 12px;
+                padding: 15px 16px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: $gray2;
 
-            &:active,
-            &:focus {
-                outline: none;
-                border: 1px solid $gray4;
+                &:active,
+                &:focus {
+                    outline: none;
+                    border: 1px solid $gray4;
+                }
             }
         }
 
@@ -117,11 +119,11 @@
         }
 
         label.incorrect[data-userinfo="email"]:after {
-            content: "Некорректный email";
+            content: "Некорректный E-mail";
         }
 
         label.incorrect[data-userinfo="pass"]:after {
-            content: "Некорректный пароль";
+            content: "Пароль должен содержать 6 или более символов";
         }
 
         label.incorrect[data-userinfo="pass2"]:after {
@@ -131,7 +133,33 @@
         label.incorrect[data-userinfo="phone"]:after {
             content: "Введите номер телефона";
         }
+
+        label.incorrect[data-userinfo="username"]:after {
+            content: "Введите корректный username";
+        }
     }
+}
+
+.modal__form label input[type="password"] {
+    padding: 15px 32px 15px 16px;
+}
+
+label[data-userinfo="pass"],
+label[data-userinfo="pass2"] {
+    position: relative;
+}
+
+.eye {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 39px;
+    cursor: pointer;
+}
+
+label.incorrect[data-userinfo="pass"]:before,
+label.incorrect[data-userinfo="pass2"]:before {
+    display: none;
 }
 
 .show {

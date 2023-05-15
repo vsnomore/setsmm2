@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="icon" type="image/x-icon" href="./icons/Favicon.svg">
     <title>SetSMM</title>
 </head>
 
@@ -29,6 +30,13 @@
                 <div class="header__buttons">
                     <a data-modal="sign-in" href="" class="button button_sign-in">Вход</a>
                     <a data-modal="sign-up" id="btn-registration" href="" class="button">Регистрация</a>
+                </div>
+                <div class="header__logout">
+                    <div class="header__userinfo">
+                        <img src="./icons/avatar.png" alt="" class="header__avatar">
+                        <div class="header__username">Username</div>
+                    </div>
+                    <a href="#" class="header__exit"><img src="./icons/logout.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -162,7 +170,7 @@
                         </label>
                         <label data-userinfo="quantity">
                             <span>Количество</span>
-                            <input class="order__form-quantity" name="quantity" id="quantity" placeholder="200" type="number">
+                            <input class="order__form-quantity" name="quantity" id="quantity" value="200" type="number">
                         </label>
 
 
@@ -494,9 +502,9 @@
             </label>
             <label data-userinfo="phone">
                 <span>Телефон в Viber, Telegram или Whatsapp</span>
-                <input name="phone" placeholder="Номер телефона" type="tel">
+                <input name="phone" placeholder="Номер телефона" type="number">
             </label>
-            <label>
+            <label data-userinfo="username">
                 <span>Логин в телеграм (если есть)</span>
                 <input name="username" placeholder="@username" type="text">
             </label>
@@ -516,11 +524,13 @@
             </label>
             <label data-userinfo="pass">
                 <span>Придумайте пароль</span>
-                <input name="password" placeholder="Пароль" type="password">
+                <input data-field="password" name="password" placeholder="Пароль" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
             </label>
             <label data-userinfo="pass2">
                 <span>Повторите введенный пароль</span>
-                <input name="password2" placeholder="Повтор пароля" type="password">
+                <input data-field="password" name="password2" placeholder="Повтор пароля" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
             </label>
             <button class="button button_modal">Регистарция</button>
         </form>
@@ -537,9 +547,10 @@
             </label>
             <label data-userinfo="pass">
                 <span>Введите ваш пароль</span>
-                <input name="password" placeholder="Пароль" type="password">
+                <input data-field="password" name="password" placeholder="Пароль" type="password">
+                <img class="eye" src="./icons/state/see.svg" alt="">
             </label>
-            <button class="button button_modal">Вход</button>
+            <button data-login="sign-in" class="button button_modal">Вход</button>
         </form>
     </div>
 

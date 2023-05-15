@@ -267,6 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.order__info-item-descr[data-info="price"]').innerHTML = `${price}₽`;
             document.querySelector('.order__info-item-descr[data-info="min"]').innerHTML = `${el.services[ind].minOrder} шт`;
             document.querySelector('.order__info-item-descr[data-info="max"]').innerHTML = `${el.services[ind].maxOrder} шт`;
+            if (quantityInput.value < el.services[ind].minOrder) {
+                quantityInput.value = el.services[ind].minOrder;
+            } else {
+                quantityInput.value = 200;
+            }
         });
     }
 
@@ -294,9 +299,51 @@ document.addEventListener('DOMContentLoaded', () => {
     //валідація форми
     const validateEmail = (email) => {
         return String(email).toLowerCase().match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,15}$/
         );
     };
+
+    const validateLink = (link) => {
+        return String(link).match(
+            /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
+        );
+    };
+
+    const validateUsername = (username) => {
+        return String(username).match(
+            /^@?[a-z][a-z0-9_]*$/
+        );
+    };
+
+    const validatePhone = (phone) => {
+        return String(phone).match(
+            /^[\+]?[(]?[0-9]{1,3}[)]?[-\s\.\,]?[0-9()]{2,5}[-\s\.\,]?[0-9.\s\-()\,]{4,16}$/
+        );
+    };
+
+    const eye = document.querySelectorAll('.eye');
+    const passwordFields = document.querySelectorAll('input[data-field="password"]');
+
+    passwordFields.forEach(item => {
+        item.addEventListener('input', () => {
+            if (item.value.toString().length >= 1) {
+                item.nextElementSibling.style.display = "block";
+            } else {
+                item.nextElementSibling.style.display = "none";
+            }
+        });
+    });
+
+
+
+    eye.forEach(function (item) {
+        item.addEventListener('click', function () {
+            const passField = this.previousElementSibling;
+
+            const type = passField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passField.setAttribute('type', type);
+        });
+    });
 
     let statusForSendingData = true;
 
@@ -311,27 +358,37 @@ document.addEventListener('DOMContentLoaded', () => {
             formInputs = form.querySelectorAll('input'),
             formClose = form.querySelector('.modal__close-icon');
 
-
         formButton.addEventListener('click', e => {
             e.preventDefault();
             statusForSendingData = true;
 
             formInputs.forEach(el => {
-                if (el.name == 'email' && !validateEmail(el.value)) {
-                    el.labels[0].classList.add('incorrect');
-                    statusForSendingData = false;
-                }
-
-                if (el.name == 'phone') {
-                    if (el.value.toString().length < 8) {
+                if (el.name == 'email') {
+                    if (!validateEmail(el.value) || el.value.toString().length > 100) {
                         el.labels[0].classList.add('incorrect');
                         statusForSendingData = false;
                     }
                 }
 
-                if (el.name == 'link' && !el.value) {
-                    el.labels[0].classList.add('incorrect');
-                    statusForSendingData = false;
+                if (el.name == 'phone') {
+                    if (el.value.toString().length < 8 || el.value.toString().length > 30 || !validatePhone(el.value)) {
+                        el.labels[0].classList.add('incorrect');
+                        statusForSendingData = false;
+                    }
+                }
+
+                if (el.name == 'username') {
+                    if (!validateUsername(el.value) || el.value.toString().length > 50) {
+                        el.labels[0].classList.add('incorrect');
+                        statusForSendingData = false;
+                    }
+                }
+
+                if (el.name == 'link') {
+                    if (!validateLink(el.value) || el.value.toString().length > 100) {
+                        el.labels[0].classList.add('incorrect');
+                        statusForSendingData = false;
+                    }
                 }
 
                 if (el.name == 'quantity') {
@@ -342,9 +399,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (el.name == 'password') {
-                    if (el.value.toString().length < 8 || !el.value.toString().match(/^[\S]*$/)) {
+                    if (el.value.toString().length <= 6 || !el.value.toString().match(/^[\S]*$/)) {
                         el.labels[0].classList.add('incorrect');
-                        el.value = '';
                         statusForSendingData = false;
                     }
                 }
@@ -366,6 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.value = '';
                     el.labels[0].classList.remove('incorrect');
                 });
+                passwordFields.forEach(item => {
+                    item.nextElementSibling.style.display = "none";
+                });
             });
 
             overlay.addEventListener('click', () => {
@@ -373,7 +432,45 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.value = '';
                     el.labels[0].classList.remove('incorrect');
                 });
+                passwordFields.forEach(item => {
+                    item.nextElementSibling.style.display = "none";
+                });
             });
         }
     }
+
+    const loginButton = document.querySelector('button[data-login="sign-in"]');
+    const logoutBtn = document.querySelector('.header__exit');
+    const headerBtns = document.querySelector('.header__buttons');
+    const headerLogout = document.querySelector('.header__logout');
+    const hederQuickOrder = document.querySelector('body > header > div > div > nav > ul > li:nth-child(1)');
+    const sectionQuickOrder = document.getElementById('quick-order');
+    const promoBtn = document.querySelector('body > section.main-promo > div > div > div.main-promo__block > a');
+
+    loginButton.addEventListener('click', function () {
+        validation('#sign-in');
+
+        if (statusForSendingData === true) {
+            const modal = this.closest('.modal');
+
+            modal.classList.remove('show');
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+
+            headerBtns.style.display = 'none';
+            headerLogout.style.display = 'flex';
+            hederQuickOrder.style.display = 'none';
+            sectionQuickOrder.style.display = 'none';
+            promoBtn.style.display = 'none';
+        }
+    });
+
+    logoutBtn.addEventListener('click', () => {
+        headerBtns.style.display = 'flex';
+        headerLogout.style.display = 'none';
+        hederQuickOrder.style.display = 'block';
+        sectionQuickOrder.style.display = 'block';
+        promoBtn.style.display = 'block';
+    });
 });
